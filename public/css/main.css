@@ -1,0 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body,h1,h2,h3,h4,h5,h6,span,input,label,small{
+  font-family: 'Roboto' !important;
+}
+.row .col {
+  padding: 0 !important;
+}
+.padding_none{
+  border-bottom: none !important;
+  padding: 0 ;
+  margin: 0 !important;
+}
+.wrapper ,.root{
+  margin: 0;
+  padding: 0;
+}
+.logo{
+  height: 100px;
+  width: 120px;
+}
+.icono{
+  height: 30px;
+}
+.container{
+  background-image: url(../vistas/2.png);
+  background-size: cover;
+}
