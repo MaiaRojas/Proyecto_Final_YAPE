@@ -5,26 +5,133 @@
 body,h1,h2,h3,h4,h5,h6,span,input,label,small{
   font-family: 'Roboto' !important;
 }
-.row .col {
+h5{
+  font-size: 1.38rem;
+  padding: 0 5%;
+}
+.color_turquesa{
+  color:#00c3a3;
+}
+.gris_dark{
+  color: #212121
+}
+.gris_soft {
+  color: #8f8f8f;
+}
+.bg_amarillo{
+  background-color: #fbd43b;
+  height: 100vh;
+}
+
+/*.row .col {
   padding: 0 !important;
+}*/
+.margin_none{
+  margin: 0 !important;
+}
+.padding_top_60{
+  padding-top: 60%;
 }
 .padding_none{
   border-bottom: none !important;
   padding: 0 ;
   margin: 0 !important;
 }
+.mg_bot_5{
+  margin-bottom: 5%;
+}
+.pad_lef_rig_10{
+  padding: 0 10%;
+}
+.bolt{
+  font-weight: bold;
+}
 .wrapper ,.root{
   margin: 0;
   padding: 0;
+  height: 100vh;
 }
 .logo{
   height: 100px;
   width: 120px;
 }
 .icono{
-  height: 30px;
+  height: 25px;
 }
 .container{
-  background-image: url(../vistas/2.png);
+  /*background-image: url(../vistas/4.png);*/
   background-size: cover;
+  height: 100vh;
+}
+.carousel.carousel-slider{
+  height: 70% !important;
+  top: 110px;
+}
+.contx{
+  height: 70% !important;
+  top: 110px;
+}
+.carousel .carousel-item > img {
+    width: 170px;
+    height: 170px;
+}
+.carousel .indicators .indicator-item.active {
+    background-color: #f64552 ;
+}
+.carousel .indicators .indicator-item {
+    height: 12px ;
+    width: 12px ;
+    background-color: #f8f8f8;
+}
+.carousel .indicators {
+      bottom: 100px;
+}
+.btn-large {
+    height: 40px;
+    line-height: 45px;
+    width: 293px;
+    background-color: #fbd43b;
+    margin: 0 15px;
+}
+.margin_top_75{
+  margin-top: 75px;
+}
+.cont_text{
+  height: 120px;
+}
+.btn.disabled{
+  color: white !important;
+}
+.btn_center{
+  margin-left: 28%;
+  margin-top: 20%;
+}
+.btn_center1{
+    margin-left: 24%;
+    margin-top: 8%;
+}
+.btn{
+    background-color: #fbd43b;
+}
+.btn:hover, .btn-large:hover {
+    background-color: #fbd43b;
+}
+.cont_center{
+  text-align: center;
+}
+.lock{
+  background-image:url(../img/icons/clock.png);
+}
+.clave{
+  letter-spacing:8px;
+  padding-left: 10% !important;
+}
+.bg_user{
+  background-image: url(../img/icons/user.png);
+}
+.bg_email{
+  background-image: url(../img/icons/message-gray.png);
+}
+.bg_lock{
+  background-image: url(../img/icons/lock.png);
 }
