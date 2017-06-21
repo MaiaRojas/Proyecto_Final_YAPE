@@ -11,7 +11,7 @@ const termsCond = (update) => {
   const number    =$('<input type="text" maxlength="9" name="phone" class="col s9 padding_none" placeholder="Número de télefono">');
   const icono     =$('<img src="../../img/icons/phoneandnumber.png" class="icono col s3" alt="">');
   const hr        =$('<hr class="col s12 mg_bot_5">');
-  const check     =$('<input type="checkbox" class="filled-in" id="aceptar" >');
+  const check     =$('<input type="checkbox" class="filled-in" id="aceptar"  required>');
   const label     =$('<label for="aceptar">Acepto los <span class="color_turquesa">Términos y condiciones</span></label>');
 
   const btn_next  =$('<button id="btnNext"class="btn btn_center disabled">CONTINUAR</button>');
@@ -26,27 +26,31 @@ const termsCond = (update) => {
   divCont_Pag_2.append(contVali)
   divCont_Pag_2.append(btn_next)
 
-  number.keypress(function(event ) {
-    if(event.which< 47 || event.which >58) {
+  number.keypress((event )=> {
+    if(event.which < 47 || event.which >58) {
         event.preventDefault();
     };
   });
 
-const condiciones = $("#aceptar")[0].checked;
+  check.on('click', (e)=>{
+    Verificar('#aceptar');
+  });
 
   number.on('keyup',(e) => {
-    console.log(condiciones);
-      if(number.val() =="" || !condiciones){
-          $('#btnNext').addClass("disabled");
-      } else {
-          if (number.val().length == 9 && condiciones) {
-                console.log(condiciones);
+      if(number.val() != "" ){
+        if (number.val().length == 9 && $('#aceptar').prop('checked')){
                 $('#btnNext').removeClass("disabled");
-           } else {
-                $('#btnNext').addClass("disabled");
-          }
+         }else {
+               $('#btnNext').addClass("disabled");
+        }
+      } else {
+            // $('#btnNext').addClass("disabled");
       };
   });
+
+   btn_next.on('click',(e)=>{
+     PostregisterNumber(number,check);
+   });
 
   return divCont_Pag_2;
 }
