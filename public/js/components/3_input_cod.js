@@ -23,10 +23,24 @@ const inputCod = (update) => {
   contVali.append(timeoff);
   divCont_Pag_3.append(contVali);
 
+  var i= 22;
+  var myVar = setInterval(function(){ InicioTime() }, 500);
 
+  function InicioTime() {
+    i=i-1;
+    if (i==0){
+      i=22;
+      console.log(state.datos.data.phone);
+      PostresendCode(update,state.datos.data.phone);
+    }
+    console.log(i);
+  }
+
+  function stopTime() {
+      clearInterval(myVar);
+  }
   number.on('keyup',(e) => {
-    console.log(number.val());
-    console.log(state.code);
+
     if(number.val()== state.code){
        state.selecteScreen = 4;
        update();
