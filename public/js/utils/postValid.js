@@ -10,28 +10,15 @@ const PostregisterNumber =(update,phone , terms)=>{
             state.selecteScreen = 3;
             state.phone = state.datos.data.phone;
             state.code = state.datos.data.code;
-            console.log(state.datos.data.code);
-            console.log(state.datos.data.phone);
             update();
         }
   });
 };
 const PostresendCode =(update,phone)=>{
   var phone = phone;
-  console.log(phone);
-  console.log(state.datos);
   $.post("api/resendCode", {"phone" :phone }, function(result){
-         console.log(result);
-        //   if (state.datos.success == false) {
-        //       alert(result.message);
-        //   }else{
-        //     state.selecteScreen = 3;
-        //     state.phone = state.datos.data.phone;
-        //     state.code = state.datos.data.code;
-        //     console.log(state.datos.data.code);
-        //     console.log(state.datos.data.phone);
-        //     update();
-        // }
+         console.log(result.data);
+         state.datos.data.code=result.data;
   });
 };
 const PostcreateUser =(update, phone,name,email,password)=>{

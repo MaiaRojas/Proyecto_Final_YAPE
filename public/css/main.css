@@ -34,9 +34,7 @@ h5{
   background-color: #fbd43b;
   height: 100vh;
 }
-/*.row .col {
-  padding: 0 !important;
-}*/
+
 .margin_none{
   margin: 0 !important;
 }
@@ -137,10 +135,7 @@ h5{
     margin-left: 24%;
     margin-top: 8%;
 }
-/*.btn_center2{
-    margin-left: 24%;
-    margin-top: 8%;
-}*/
+
 .btn{
     background-color: #fbd43b;
 }
@@ -191,4 +186,14 @@ h5{
 }
 .display_flex1{
   display: flex;
+}
+.display_flex2{
+  display: flex;
+  justify-content: center;
+}
+#firstname{
+  text-transform: capitalize;
+}
+.margin_bot_none{
+  margin-bottom:0 !important;
 }

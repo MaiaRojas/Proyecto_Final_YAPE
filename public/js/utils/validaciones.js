@@ -26,7 +26,7 @@ const Validar =(name,email,password ) =>{
 
 const soloNumber=(numbercard , month ,years)=>{
   if (numbercard.val() != "" && month.val() !=""&& years.val()!=""){
-      if (numbercard.val().length == 16 && month.val()< 13 && years.val()>16 && years.val()<25 ){
+      if (numbercard.val().length == 16 && month.val()> 0 && month.val()< 13 && years.val()>16 && years.val()<25 ){
         return $('#btn_cont').removeClass("disabled");
       }else{
         return $('#btn_cont').addClass("disabled");

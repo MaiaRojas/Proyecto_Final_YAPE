@@ -7,12 +7,13 @@ const inputCod = (update) => {
                     '<p class="center-align">Enviamos un SMS con el código de validación al numero  <span class="bolt">'
                     +state.phone +'</span></p></div>');
   const contVali  =$('<div class="row pad_lef_rig_10"></div>');
-  const number    =$('<input type="text" name="phone"   maxlength="6" class="col s9 padding_none clave" placeholder=" - - - - -">');
+  const number    =$('<input type="text" name="phone"   maxlength="6" class="col s9 padding_none clave input_heiht_2" placeholder=" - - - - -">');
   const divIcono  =$('<div class="col s3 text-center cont_center"></div>');
-  const icono     =$('<img src="../../img/icons/lock.png" class="icono" alt="lock">');
+  const icono     =$('<img src="../../img/icons/lock.png" class="icono_medium" alt="lock">');
   const hr        =$('<hr class="col s12 mg_bot_5">');
-  const timeoff     =$('<p class="cont_center gris_soft ">Reintentar en <span class="lock"></span>21</p>');
+  const timeoff     =$('<p class="cont_center gris_soft ">Reintentar en <span class="lock"></span><span class="indice"></span></p>');
 
+  console.log(state.datos.data.code);
   row1.append(logo);
   row1.append(cont_text);
   divCont_Pag_3.append(row1);
@@ -24,24 +25,20 @@ const inputCod = (update) => {
   divCont_Pag_3.append(contVali);
 
   var i= 22;
-  var myVar = setInterval(function(){ InicioTime() }, 500);
+  var myVar = setInterval(function(){ InicioTime() }, 1000);
 
   function InicioTime() {
     i=i-1;
-    if (i==0){
-      i=22;
-      console.log(state.datos.data.phone);
+    $('.indice').text(i);
+    if (i==0){ i=22;
       PostresendCode(update,state.datos.data.phone);
     }
     console.log(i);
   }
 
-  function stopTime() {
-      clearInterval(myVar);
-  }
   number.on('keyup',(e) => {
-
-    if(number.val()== state.code){
+    if(number.val()== state.datos.data.code){
+      clearInterval(myVar);
        state.selecteScreen = 4;
        update();
     }

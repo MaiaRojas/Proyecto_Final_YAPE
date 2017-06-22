@@ -50,7 +50,6 @@ const registerCard = (update) => {
 
   btn_cont.on('click',(e)=>{
     e.preventDefault();
-    console.log(state.user.data.password);
     PostregisterCard(update,state.phone,numbercard,month,years,state.user.data.password);
   });
   return divCont_Pag_6;
