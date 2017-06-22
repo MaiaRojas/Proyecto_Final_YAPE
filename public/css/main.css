@@ -54,13 +54,22 @@ h5{
 }
 .logo{
   height: 100px;
-  width: 120px;
+  width: 110px;
 }
-.icono{
+.icono_big{
   height: 25px;
 }
+.icono_medium{
+  height: 18px;
+}
+.icono_small{
+  height: 14px;
+}
+.inline{
+  display: inline;
+}
 .container{
-  /*background-image: url(../vistas/4.png);*/
+  /*background-image: url(../vistas/8.png);*/
   background-size: cover;
   height: 100vh;
 }
@@ -135,4 +144,7 @@ h5{
 }
 .bg_lock{
   background-image: url(../img/icons/lock.png);
+}
+.input_heiht_2{
+height: 2.1rem !important;
 }
