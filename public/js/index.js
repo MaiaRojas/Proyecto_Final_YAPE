@@ -19,21 +19,20 @@ const render = (root) => {
     wrapper.append(userYape ( _ => {
       render(root);
     }));
-  }else if (state.selecteScreen == 5) {
+  } else if (state.selecteScreen == 5) {
     wrapper.append(yapeOk ( _ => {
       render(root);
     }));
   }
-
-
   root.append(wrapper);
 };
 
 
 const state = {
+  datos:null,
   code:null,
   user:null,
-  paginas: null,
+  phone: null,
   selectedScreen: null
 };
 

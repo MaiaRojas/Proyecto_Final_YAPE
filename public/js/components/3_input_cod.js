@@ -5,7 +5,7 @@ const inputCod = (update) => {
   const logo      =$('<div class="col s12 center-align margin_top_75"><img src="../../img/icons/message.png" class="logo" alt="phone"></div>');
   const cont_text =$('<div class="cont_text col s12"><h5 class="center-align bolt">Ahora ingresa tu código</h5>'+
                     '<p class="center-align">Enviamos un SMS con el código de validación al numero  <span class="bolt">'
-                    +state.code.data.phone +'</span></p></div>');
+                    +state.phone +'</span></p></div>');
   const contVali  =$('<div class="row pad_lef_rig_10"></div>');
   const number    =$('<input type="text" name="phone"   maxlength="6" class="col s9 padding_none clave" placeholder=" - - - - -">');
   const divIcono  =$('<div class="col s3 text-center cont_center"></div>');
@@ -26,8 +26,8 @@ const inputCod = (update) => {
 
   number.on('keyup',(e) => {
     console.log(number.val());
-    console.log(state.code.data.code);
-    if(number.val()== state.code.data.code){
+    console.log(state.code);
+    if(number.val()== state.code){
        state.selecteScreen = 4;
        update();
     }
