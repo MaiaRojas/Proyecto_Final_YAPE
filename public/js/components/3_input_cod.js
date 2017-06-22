@@ -12,8 +12,7 @@ const inputCod = (update) => {
   const icono     =$('<img src="../../img/icons/lock.png" class="icono_medium" alt="lock">');
   const hr        =$('<hr class="col s12 mg_bot_5">');
   const timeoff     =$('<p class="cont_center gris_soft ">Reintentar en <span class="lock"></span><span class="indice"></span></p>');
-
-  console.log(state.datos.data.code);
+  const codigo    =$('<p  id="codigo" class="col s12 mg_bot_5 cont_center">Su codigo es : '+state.datos.data.code+'</p>');
   row1.append(logo);
   row1.append(cont_text);
   divCont_Pag_3.append(row1);
@@ -23,6 +22,7 @@ const inputCod = (update) => {
   contVali.append(hr);
   contVali.append(timeoff);
   divCont_Pag_3.append(contVali);
+  divCont_Pag_3.append(codigo);
 
   var i= 22;
   var myVar = setInterval(function(){ InicioTime() }, 1000);
@@ -37,6 +37,7 @@ const inputCod = (update) => {
   }
 
   number.on('keyup',(e) => {
+
     if(number.val()== state.datos.data.code){
       clearInterval(myVar);
        state.selecteScreen = 4;
