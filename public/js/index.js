@@ -11,14 +11,28 @@ const render = (root) => {
     wrapper.append(termsCond( _ => {
       render(root);
     }));
+  }else if (state.selecteScreen == 3) {
+    wrapper.append(inputCod( _ => {
+      render(root);
+    }));
+  } else if (state.selecteScreen == 4) {
+    wrapper.append(userYape ( _ => {
+      render(root);
+    }));
+  }else if (state.selecteScreen == 5) {
+    wrapper.append(yapeOk ( _ => {
+      render(root);
+    }));
   }
+
 
   root.append(wrapper);
 };
 
 
 const state = {
-  phones:null,
+  code:null,
+  user:null,
   paginas: null,
   selectedScreen: null
 };

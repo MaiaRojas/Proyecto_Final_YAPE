@@ -40,16 +40,15 @@ const termsCond = (update) => {
       if(number.val() != "" ){
         if (number.val().length == 9 && $('#aceptar').prop('checked')){
                 $('#btnNext').removeClass("disabled");
-         }else {
+         } else {
                $('#btnNext').addClass("disabled");
         }
-      } else {
-            // $('#btnNext').addClass("disabled");
       };
   });
 
    btn_next.on('click',(e)=>{
-     PostregisterNumber(number,check);
+     PostregisterNumber(update ,number,check);
+     
    });
 
   return divCont_Pag_2;
