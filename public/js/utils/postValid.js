@@ -19,6 +19,7 @@ const PostresendCode =(update,phone)=>{
   $.post("api/resendCode", {"phone" :phone }, function(result){
          console.log(result.data);
          state.datos.data.code=result.data;
+    $('#codigo').text('Su codigo nuevo es :'+ result.data);
   });
 };
 const PostcreateUser =(update, phone,name,email,password)=>{
