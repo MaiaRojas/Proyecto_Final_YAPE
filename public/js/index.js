@@ -4,7 +4,7 @@ const render = (root) => {
   const wrapper = $('<div class="wrapper"></div>');
   root.empty();
   if (state.selecteScreen== null){
-      wrapper.append(registry( _ => {
+      wrapper.append(registry ( _ => {
         render(root);
       }));
   } else if (state.selecteScreen == 2) {
@@ -23,6 +23,18 @@ const render = (root) => {
     wrapper.append(yapeOk ( _ => {
       render(root);
     }));
+  }else if (state.selecteScreen == 6) {
+    wrapper.append(registerCard ( _ => {
+      render(root);
+    }));
+  } else if (state.selecteScreen == 7) {
+    wrapper.append(inputClave ( _ => {
+      render(root);
+    }));
+  } else if (state.selecteScreen == 8) {
+    wrapper.append(insideSign ( _ => {
+      render(root);
+    }));
   }
   root.append(wrapper);
 };
@@ -33,6 +45,7 @@ const state = {
   code:null,
   user:null,
   phone: null,
+  dateUserCard:null,
   selectedScreen: null
 };
 

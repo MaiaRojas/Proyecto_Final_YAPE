@@ -22,3 +22,29 @@ const Validar =(name,email,password ) =>{
     return $('#btn_create_count').addClass("disabled");
   };
 };
+
+
+const soloNumber=(numbercard , month ,years)=>{
+  if (numbercard.val() != "" && month.val() !=""&& years.val()!=""){
+      if (numbercard.val().length == 16 && month.val()< 13 && years.val()>16 && years.val()<25 ){
+        return $('#btn_cont').removeClass("disabled");
+      }else{
+        return $('#btn_cont').addClass("disabled");
+      }
+  } else {
+    console.log('llene todo los datos');
+    return $('#btn_cont').addClass("disabled");
+  };
+};
+const validClave=(number)=>{
+  if (number.val() != ""){
+      if (number.val().length == 4){
+        return $('#btn_clave').removeClass("disabled");
+      }else{
+        return $('#btn_clave').addClass("disabled");
+      }
+  } else {
+    console.log('Llene 4 cifras');
+    return $('#btn_clave').addClass("disabled");
+  };
+};

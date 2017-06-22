@@ -9,7 +9,11 @@ const yapeOk = (update) => {
 
   row1.append(logo);
   row1.append(cont_text);
-  divCont_Pag_5.append(row1)
+  divCont_Pag_5.append(row1) ;
 
+  setTimeout(function(){
+     state.selecteScreen = 6;
+     update();}, 3000);
+    
   return divCont_Pag_5;
 }

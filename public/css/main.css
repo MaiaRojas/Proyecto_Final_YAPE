@@ -9,6 +9,18 @@ h5{
   font-size: 1.38rem;
   padding: 0 5%;
 }
+.color_morado{
+  color: #49233b;
+}
+.color_white{
+  color: #fff;
+}
+.bg_morado_ligth{
+  background-color: #451e36 ;
+}
+.bg_morado_dark{
+  background-color: #38052a ;
+}
 .color_turquesa{
   color:#00c3a3;
 }
@@ -22,8 +34,6 @@ h5{
   background-color: #fbd43b;
   height: 100vh;
 }
-
-
 /*.row .col {
   padding: 0 !important;
 }*/
@@ -59,6 +69,10 @@ h5{
 .icono_big{
   height: 25px;
 }
+.icono_pago{
+  height: 60px;
+  width: 60px;
+}
 .icono_medium{
   height: 18px;
 }
@@ -69,7 +83,7 @@ h5{
   display: inline;
 }
 .container{
-  /*background-image: url(../vistas/8.png);*/
+  /*background-image: url(../vistas/10.png);*/
   background-size: cover;
   height: 100vh;
 }
@@ -106,6 +120,9 @@ h5{
 .margin_top_75{
   margin-top: 75px;
 }
+.margin_top_30{
+  margin-top: 30px;
+}
 .cont_text{
   height: 120px;
 }
@@ -120,6 +137,10 @@ h5{
     margin-left: 24%;
     margin-top: 8%;
 }
+/*.btn_center2{
+    margin-left: 24%;
+    margin-top: 8%;
+}*/
 .btn{
     background-color: #fbd43b;
 }
@@ -145,6 +166,29 @@ h5{
 .bg_lock{
   background-image: url(../img/icons/lock.png);
 }
-.input_heiht_2{
-height: 2.1rem !important;
+.input_heiht_2 {
+ height: 2.1rem !important;
+}
+.input_none{
+   height: 1.5rem !important;
+   margin: 0 !important;
+}
+.height_38{
+  height: 38vh;
+  margin-bottom: 0 !important;
+}
+.height_62{
+  height: 62vh;
+  margin-bottom: 0 !important;
+}
+.display_flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #8f8f8f;
+}
+.display_flex1{
+  display: flex;
 }

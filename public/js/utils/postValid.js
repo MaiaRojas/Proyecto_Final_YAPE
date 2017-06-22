@@ -18,23 +18,33 @@ const PostregisterNumber =(update,phone , terms)=>{
 };
 const PostcreateUser =(update, phone,name,email,password)=>{
   var phone = phone;
-  console.log(phone);
   var name = name.val();
-  console.log(name);
   var email = email.val();
-  console.log(email);
   var password = password.val();
-  console.log(password);
 
   $.post("api/createUser", { "phone":phone,"name":name,"email":email,"password":password }, function(result){
-        console.log('entro al post');
          state.user = result;
-         console.log(state.user);
          if (state.user.success == false) {
               alert(result.message);
           }else{
             state.selecteScreen = 5;
-            console.log(state.datos.data.card);
+            update();
+        }
+  });
+};
+const PostregisterCard =(update,phone,cardNumber,cardMonth,cardYear,cardPassword)=>{
+  var phone = phone;
+  var cardNumber = cardNumber.val();
+  var cardMonth = cardMonth.val();
+  var cardYear = cardYear.val();
+  var cardPassword = cardPassword;
+
+  $.post("api/registerCard", { "phone":phone,"cardNumber":cardNumber,"cardPassword":cardPassword,"cardMonth":cardPassword ,"cardYear":cardYear}, function(result){
+         state.dateUserCard = result;
+         if (state.dateUserCard.success == false) {
+              alert(result.message);
+         }else{
+            state.selecteScreen = 7;
             update();
         }
   });
